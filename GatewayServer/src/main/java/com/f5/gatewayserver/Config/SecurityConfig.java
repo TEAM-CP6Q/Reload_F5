@@ -43,7 +43,8 @@ public class SecurityConfig {
                                 "/api/account/designer/all-designer",
                                 "/api/product/product-list",
                                 "/api/**",
-                                "/api/home").permitAll()
+                                "/api/home",
+                                "/v1/**").permitAll()
 
                         // POST 요청 허용
                         .pathMatchers(HttpMethod.POST,
@@ -59,7 +60,8 @@ public class SecurityConfig {
                                 "/api/chat/create-chat",
                                 "/api/pickup/update-location",
                                 "/api/auth/register/deliver",
-                                "/api/**").permitAll()
+                                "/api/**",
+                                "/v1/**").permitAll()
 
                         // PATCH 요청 허용
                         .pathMatchers(HttpMethod.PATCH,
@@ -67,14 +69,16 @@ public class SecurityConfig {
                                 "/api/auth/kakao/integration",
                                 "/api/pickup/update-pickup",
                                 "/api/account/designer/update-designer",
-                                "/api/**").permitAll()
+                                "/api/**",
+                                "/v1/**").permitAll()
 
                         .pathMatchers(HttpMethod.DELETE,
                                 "/api/account/designer/remove-designer",
                                 "/api/pickup/delete-pickup",
                                 "/api/auth/withdraw",
                                 "/api/**",
-                                "/api/pickup/delete-location").permitAll()
+                                "/api/pickup/delete-location",
+                                "/v1/**").permitAll()
 
                         .anyExchange().authenticated() // 그 외의 요청은 인증 필요
                 )
