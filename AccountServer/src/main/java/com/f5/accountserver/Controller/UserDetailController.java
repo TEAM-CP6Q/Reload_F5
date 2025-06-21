@@ -97,7 +97,7 @@ public class UserDetailController {
         try {
             List<UserDetailDTO> users = userDetailsService.findAllUserDetails(); // 전체 사용자 리스트 가져오기
             for (UserDetailDTO user : users) {
-                String email = communicationService.getEmail(user.getId()); // 각 사용자의 이메일 가져오기
+                String email = communicationService.getEmail(user.getName()); // 각 사용자의 이메일 가져오기
                 userList.put(email, user); // email을 키로, userDetailDTO를 값으로 맵에 추가
             }
             return ResponseEntity.ok(userList); // 성공 시 맵을 응답으로 반환

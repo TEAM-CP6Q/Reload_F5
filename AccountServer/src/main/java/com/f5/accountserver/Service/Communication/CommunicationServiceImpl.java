@@ -1,5 +1,6 @@
 package com.f5.accountserver.Service.Communication;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.*;
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+@Slf4j
 @Service
 public class CommunicationServiceImpl implements CommunicationService {
     private final DiscoveryClient discoveryClient;
@@ -24,35 +26,63 @@ public class CommunicationServiceImpl implements CommunicationService {
     }
 
     @Override
-    public String getEmail(Long id) throws URISyntaxException {
+    public String getEmail(String name) throws URISyntaxException {
+        log.info("Getting email for name: {}", name);
+
+        // 1. discoveryClient null 체크
+        if (discoveryClient == null) {
+            log.error("DiscoveryClient is null");
+            throw new IllegalStateException("DiscoveryClient is not initialized");
+        }
+
         List<ServiceInstance> instances = discoveryClient.getInstances("AUTH-SERVER");
+        log.info("Found {} AUTH-SERVER instances", instances != null ? instances.size() : 0);
+
         if (instances == null || instances.isEmpty()) {
+            log.error("No Auth-Server instances available");
             throw new IllegalStateException("No Auth-Server instances available");
         }
 
         // 랜덤하게 하나의 인스턴스를 선택
         ServiceInstance accountService = instances.get(new Random().nextInt(instances.size()));
+        log.info("Selected instance: {}:{}", accountService.getHost(), accountService.getPort());
 
-        // URI 생성
-        URI uri = UriComponentsBuilder.fromUri(new URI("http://10.10.0.154:10000"))
-                .path("/api/auth/email/{id}")
-                .buildAndExpand(id)
+        // URI 생성 및 로깅
+        URI uri = UriComponentsBuilder.fromUri(accountService.getUri())
+                .path("/api/auth/email/" + name)
+                .build()
                 .toUri();
+
+        log.info("Generated URI: {}", uri.toString());
+        log.info("Postman URL과 비교해보세요!");
+
+        // 2. restTemplate null 체크
+        if (restTemplate == null) {
+            log.error("RestTemplate is null");
+            throw new IllegalStateException("RestTemplate is not initialized");
+        }
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<String> httpEntity = new HttpEntity<>(headers);
 
         try {
-            // 응답을 Map<String, Object>로 명확히 받기
+            log.info("Sending request to: {}", uri);
             ResponseEntity<String> response = restTemplate.exchange(uri, HttpMethod.GET, httpEntity, String.class);
+
+            log.info("Response status: {}", response.getStatusCode());
+            log.info("Response body: {}", response.getBody());
 
             if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null) {
                 return response.getBody();
             } else {
+                log.error("Request failed with status: {}", response.getStatusCode());
                 throw new IllegalStateException("Failed to get email information.");
             }
         } catch (Exception e) {
+            log.error("Exception occurred while calling AUTH-SERVER", e);
+            log.error("Exception type: {}", e.getClass().getSimpleName());
+            log.error("Exception message: {}", e.getMessage());
             throw new IllegalStateException("Failed to send request to Auth-Server", e);
         }
     }
