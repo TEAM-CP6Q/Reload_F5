@@ -10,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Random;
 
@@ -26,14 +27,14 @@ public class AccountCommunicationServiceImpl implements AccountCommunicationServ
 
     @Override
     public void registerAccount(UserDetailDTO userDetailDTO) {
-        List<ServiceInstance> instances = discoveryClient.getInstances("ACCOUNT-SERVER");
-        if (instances == null || instances.isEmpty()) {
-            throw new IllegalStateException("No Account-Server instances available");
-        }
+//        List<ServiceInstance> instances = discoveryClient.getInstances("ACCOUNT-SERVER");
+//        if (instances == null || instances.isEmpty()) {
+//            throw new IllegalStateException("No Account-Server instances available");
+//        }
 
         // URI 생성 부분 수정
-        ServiceInstance accountService = instances.get(0);
-        URI uri = URI.create(accountService.getUri() + "/api/account/add-details");
+//        ServiceInstance accountService = instances.get(0);
+        URI uri = URI.create("http://10.10.0.154:11000" + "/api/account/add-details");
 
         // HTTP 헤더 및 본문 설정
         HttpHeaders headers = new HttpHeaders();
@@ -56,7 +57,7 @@ public class AccountCommunicationServiceImpl implements AccountCommunicationServ
     }
 
     @Override
-    public void deleteAccount(Long id) {
+    public void deleteAccount(Long id) throws URISyntaxException {
         List<ServiceInstance> instances = discoveryClient.getInstances("ACCOUNT-SERVER");
         if (instances == null || instances.isEmpty()) {
             throw new IllegalStateException("No Account-Server instances available");
@@ -66,7 +67,7 @@ public class AccountCommunicationServiceImpl implements AccountCommunicationServ
         ServiceInstance accountService = instances.get(new Random().nextInt(instances.size()));
 
         // URI 생성
-        URI uri = UriComponentsBuilder.fromUri(accountService.getUri())
+        URI uri = UriComponentsBuilder.fromUri(new URI("http://10.10.0.154:11000"))
                 .path("/api/account/withdraw/{id}")
                 .buildAndExpand(id)
                 .toUri();
@@ -90,7 +91,7 @@ public class AccountCommunicationServiceImpl implements AccountCommunicationServ
     }
 
     @Override
-    public String getAccountEmail(Long id) {
+    public String getAccountEmail(Long id) throws URISyntaxException {
         List<ServiceInstance> instances = discoveryClient.getInstances("ACCOUNT-SERVER");
         if (instances == null || instances.isEmpty()) {
             throw new IllegalStateException("No Account-Server instances available");
@@ -98,7 +99,7 @@ public class AccountCommunicationServiceImpl implements AccountCommunicationServ
         ServiceInstance accountService = instances.get(new Random().nextInt(instances.size()));
 
         // URI 생성
-        URI uri = UriComponentsBuilder.fromUri(accountService.getUri())
+        URI uri = UriComponentsBuilder.fromUri(new URI("http://10.10.0.154:11000"))
                 .path("/api/account/email/{id}")
                 .buildAndExpand(id)
                 .toUri();
@@ -122,7 +123,7 @@ public class AccountCommunicationServiceImpl implements AccountCommunicationServ
     }
 
     @Override
-    public void releaseAccount(Long id) {
+    public void releaseAccount(Long id) throws URISyntaxException {
         List<ServiceInstance> instances = discoveryClient.getInstances("ACCOUNT-SERVER");
         if (instances == null || instances.isEmpty()) {
             throw new IllegalStateException("No Account-Server instances available");
@@ -130,7 +131,7 @@ public class AccountCommunicationServiceImpl implements AccountCommunicationServ
         ServiceInstance accountService = instances.get(new Random().nextInt(instances.size()));
 
         // URI 생성
-        URI uri = UriComponentsBuilder.fromUri(accountService.getUri())
+        URI uri = UriComponentsBuilder.fromUri(new URI("http://10.10.0.154:11000"))
                 .path("/api/account/rollback-account/{id}")
                 .buildAndExpand(id)
                 .toUri();

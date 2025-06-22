@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="07a30686-48a3-4b1a-a3bf-fe8a78ef2b84" name="변경" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AuthServer" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AuthServer" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AuthServer" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AuthServer" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+        <option value="spring-beans.schema" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="donggyun-han &lt;hdg5639@daum.net&gt;" />
+        <option value="DonggyunHan" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="develop" />
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DonggyunHan&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:TEAM-CP6Q/Reload_F5.git",
+    "accountId": "7300adcf-b5cd-4225-9feb-d768274ed9cf"
+  }
+}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2n18RYKwI81vG8y1YHPSyVNIXml" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.AuthServer [bootJar].executor": "Run",
+    "Gradle.AuthServer [build].executor": "Run",
+    "Gradle.AuthServer 빌드.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.AuthServerApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/bagsang/IdeaProjects/AuthServer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.f5.authserver.Service.User" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.AuthServer [bootJar]">
+    <configuration name="AuthServer [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AuthServer [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AuthServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="AuthServer.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.f5.authserver.AuthServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="AuthServer.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.f5.authserver.AuthServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.AuthServer [bootJar]" />
+      <item itemvalue="Spring Boot.AuthServerApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.AuthServer [bootJar]" />
+        <item itemvalue="Gradle.AuthServer [bootJar]" />
+        <item itemvalue="Gradle.AuthServer [bootJar]" />
+        <item itemvalue="Gradle.AuthServer [bootJar]" />
+        <item itemvalue="Gradle.AuthServer [bootJar]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="07a30686-48a3-4b1a-a3bf-fe8a78ef2b84" name="변경" comment="" />
+      <created>1728129213248</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728129213248</updated>
+      <workItem from="1728129214241" duration="6747000" />
+      <workItem from="1728144083575" duration="6004000" />
+      <workItem from="1728150111539" duration="423000" />
+      <workItem from="1728153088253" duration="6005000" />
+      <workItem from="1728208152514" duration="23721000" />
+      <workItem from="1728272691715" duration="5905000" />
+      <workItem from="1728345773224" duration="12263000" />
+      <workItem from="1728403375678" duration="4691000" />
+      <workItem from="1728559035708" duration="296000" />
+      <workItem from="1728760706529" duration="431000" />
+      <workItem from="1728761574178" duration="693000" />
+      <workItem from="1728865021490" duration="667000" />
+      <workItem from="1728960284309" duration="11323000" />
+      <workItem from="1728991804654" duration="1515000" />
+      <workItem from="1729103543781" duration="718000" />
+      <workItem from="1729269239305" duration="1478000" />
+      <workItem from="1729774058109" duration="86000" />
+      <workItem from="1730117021990" duration="172000" />
+      <workItem from="1730175250861" duration="926000" />
+      <workItem from="1730262264103" duration="14000" />
+      <workItem from="1730262295212" duration="11000" />
+      <workItem from="1730262667311" duration="1138000" />
+      <workItem from="1730364162451" duration="10916000" />
+      <workItem from="1730473144864" duration="54000" />
+      <workItem from="1730553184715" duration="53205000" />
+      <workItem from="1730878976052" duration="2697000" />
+      <workItem from="1730891432092" duration="2592000" />
+      <workItem from="1730896543459" duration="11000" />
+      <workItem from="1730956736558" duration="421000" />
+      <workItem from="1730958679082" duration="18054000" />
+      <workItem from="1731142566320" duration="2421000" />
+      <workItem from="1731182742724" duration="8000" />
+      <workItem from="1731183503317" duration="62000" />
+      <workItem from="1731216841825" duration="11000" />
+      <workItem from="1731217160834" duration="269000" />
+      <workItem from="1731469451218" duration="113000" />
+      <workItem from="1731579153333" duration="670000" />
+      <workItem from="1731605003703" duration="793000" />
+      <workItem from="1732077554009" duration="4530000" />
+      <workItem from="1732509143418" duration="3176000" />
+      <workItem from="1732536383590" duration="231000" />
+      <workItem from="1732594950346" duration="3933000" />
+      <workItem from="1732606108349" duration="3837000" />
+      <workItem from="1732633798908" duration="30000" />
+      <workItem from="1732635244709" duration="2818000" />
+      <workItem from="1732781599789" duration="2267000" />
+      <workItem from="1732787127475" duration="105000" />
+      <workItem from="1732793796524" duration="622000" />
+      <workItem from="1733129968264" duration="673000" />
+      <workItem from="1733498303862" duration="392000" />
+      <workItem from="1733595877295" duration="479000" />
+      <workItem from="1733596422906" duration="8332000" />
+      <workItem from="1733731685239" duration="1957000" />
+      <workItem from="1735835660741" duration="2169000" />
+      <workItem from="1736012741330" duration="929000" />
+      <workItem from="1736014429937" duration="1843000" />
+      <workItem from="1736939899396" duration="516000" />
+      <workItem from="1737373129290" duration="465000" />
+      <workItem from="1737375311932" duration="13000" />
+      <workItem from="1737375867608" duration="12000" />
+      <workItem from="1737464340256" duration="420000" />
+      <workItem from="1737464777771" duration="2321000" />
+      <workItem from="1740656857989" duration="2725000" />
+      <workItem from="1740746519891" duration="616000" />
+      <workItem from="1740760870253" duration="904000" />
+      <workItem from="1741450958696" duration="21000" />
+      <workItem from="1741451017108" duration="2987000" />
+      <workItem from="1742287213240" duration="1874000" />
+      <workItem from="1742442993784" duration="4850000" />
+      <workItem from="1742801160848" duration="2766000" />
+      <workItem from="1743386948937" duration="7000" />
+      <workItem from="1743470889399" duration="3949000" />
+      <workItem from="1744261639016" duration="7000" />
+      <workItem from="1746953910121" duration="2448000" />
+      <workItem from="1746956737242" duration="177000" />
+      <workItem from="1747732703554" duration="1072000" />
+      <workItem from="1747736658405" duration="1464000" />
+      <workItem from="1747748743972" duration="31000" />
+      <workItem from="1747748852170" duration="1557000" />
+      <workItem from="1747755820851" duration="639000" />
+      <workItem from="1748688525722" duration="84861000" />
+      <workItem from="1750421131424" duration="14699000" />
+      <workItem from="1750612441355" duration="507000" />
+    </task>
+    <task id="LOCAL-00001" summary="First Commit">
+      <option name="closed" value="true" />
+      <created>1728129241604</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728129241604</updated>
+    </task>
+    <task id="LOCAL-00002" summary="어드민 로그인, 추가 / 유저 로그인, 회원가입 구현">
+      <option name="closed" value="true" />
+      <created>1728149886807</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728149886807</updated>
+    </task>
+    <task id="LOCAL-00003" summary="어드민 로그인, 추가 / 유저 로그인, 회원가입 구현">
+      <option name="closed" value="true" />
+      <created>1728149983925</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728149983925</updated>
+    </task>
+    <task id="LOCAL-00004" summary="회원 탈퇴, Gateway와 Secretkey 공유 구현">
+      <option name="closed" value="true" />
+      <created>1728559091897</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728559091897</updated>
+    </task>
+    <task id="LOCAL-00005" summary="properties private 설정 테스트">
+      <option name="closed" value="true" />
+      <created>1728964202128</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728964202128</updated>
+    </task>
+    <task id="LOCAL-00006" summary="properties private 설정 테스트">
+      <option name="closed" value="true" />
+      <created>1728964455208</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728964455208</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Kakao 로그인 구현 중 / 이메일, 이름, 전화번호, 아이디 성공 / 배송지 예정">
+      <option name="closed" value="true" />
+      <created>1730576593904</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730576593904</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Kakao 로그인 실험 성공 / 회원 통합, 가입 구현 중">
+      <option name="closed" value="true" />
+      <created>1730640195812</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730640195812</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Kakao 로그인 실험 성공 / 회원 통합, 가입 구현 중">
+      <option name="closed" value="true" />
+      <created>1730696654803</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730696654803</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Kakao 로그인 실험 성공 / 회원 통합, 가입 구현 중">
+      <option name="closed" value="true" />
+      <created>1730976538953</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730976538953</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Kakao 로그인 실험 성공 / 회원 통합, 가입 구현 중">
+      <option name="closed" value="true" />
+      <created>1731183511954</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731183511954</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Kakao 로그인 실험 성공 / 회원 통합, 가입 구현 중">
+      <option name="closed" value="true" />
+      <created>1731217295119</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731217295119</updated>
+    </task>
+    <task id="LOCAL-00013" summary="AuthServer CI/CD 테스트">
+      <option name="closed" value="true" />
+      <created>1732509444051</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732509444051</updated>
+    </task>
+    <task id="LOCAL-00014" summary="AuthServer CI/CD 테스트">
+      <option name="closed" value="true" />
+      <created>1732509807723</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732509807723</updated>
+    </task>
+    <task id="LOCAL-00015" summary="AuthServer CI/CD 테스트: 테스트 프로퍼티">
+      <option name="closed" value="true" />
+      <created>1732510652224</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732510652224</updated>
+    </task>
+    <task id="LOCAL-00016" summary="AuthServer CI/CD 테스트: 테스트 프로퍼티">
+      <option name="closed" value="true" />
+      <created>1732511809479</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732511809479</updated>
+    </task>
+    <task id="LOCAL-00017" summary="AuthServer CI/CD 테스트: 테스트 스킵 처리">
+      <option name="closed" value="true" />
+      <created>1732512011201</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732512011201</updated>
+    </task>
+    <task id="LOCAL-00018" summary="리다이렉트 uri 변경">
+      <option name="closed" value="true" />
+      <created>1732536414956</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732536414956</updated>
+    </task>
+    <task id="LOCAL-00019" summary="배송기사 회원가입 로그인 기초 틀">
+      <option name="closed" value="true" />
+      <created>1732595867167</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732595867167</updated>
+    </task>
+    <task id="LOCAL-00020" summary="배송기사 회원가입 로그인 기초 틀">
+      <option name="closed" value="true" />
+      <created>1732596072044</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732596072044</updated>
+    </task>
+    <task id="LOCAL-00021" summary="배송기사 회원가입 로그인 기초 틀">
+      <option name="closed" value="true" />
+      <created>1732596345892</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732596345892</updated>
+    </task>
+    <task id="LOCAL-00022" summary="배송기사 회원가입 로그인 기초 틀">
+      <option name="closed" value="true" />
+      <created>1732596762449</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1732596762449</updated>
+    </task>
+    <task id="LOCAL-00023" summary="배송기사 회원가입 로그인 기초 틀">
+      <option name="closed" value="true" />
+      <created>1732597759576</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732597759576</updated>
+    </task>
+    <task id="LOCAL-00024" summary="배송기사 회원가입 로그인 기초 틀">
+      <option name="closed" value="true" />
+      <created>1732609980177</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732609980177</updated>
+    </task>
+    <task id="LOCAL-00025" summary="젠킨스 무중단 배포 실험">
+      <option name="closed" value="true" />
+      <created>1732610638464</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1732610638464</updated>
+    </task>
+    <task id="LOCAL-00026" summary="젠킨스 무중단 배포 실험">
+      <option name="closed" value="true" />
+      <created>1732612373449</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1732612373449</updated>
+    </task>
+    <task id="LOCAL-00027" summary="젠킨스 무중단 배포 실험">
+      <option name="closed" value="true" />
+      <created>1732635305873</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1732635305873</updated>
+    </task>
+    <task id="LOCAL-00028" summary="젠킨스 무중단 배포 실험">
+      <option name="closed" value="true" />
+      <created>1732781608174</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1732781608174</updated>
+    </task>
+    <task id="LOCAL-00029" summary="환경변수 설정">
+      <option name="closed" value="true" />
+      <created>1732784271422</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1732784271422</updated>
+    </task>
+    <task id="LOCAL-00030" summary="환경변수 설정">
+      <option name="closed" value="true" />
+      <created>1732787142297</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1732787142297</updated>
+    </task>
+    <task id="LOCAL-00031" summary="환경변수 설정">
+      <option name="closed" value="true" />
+      <created>1732794341843</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1732794341843</updated>
+    </task>
+    <task id="LOCAL-00032" summary="환경변수 설정">
+      <option name="closed" value="true" />
+      <created>1733129980756</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1733129980756</updated>
+    </task>
+    <task id="LOCAL-00033" summary="카톡 에러 메세지 수정">
+      <option name="closed" value="true" />
+      <created>1733498571835</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1733498571835</updated>
+    </task>
+    <task id="LOCAL-00034" summary="카톡 에러 메세지 수정">
+      <option name="closed" value="true" />
+      <created>1733595963004</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1733595963004</updated>
+    </task>
+    <task id="LOCAL-00035" summary="카톡 에러 메세지 수정">
+      <option name="closed" value="true" />
+      <created>1733597991879</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1733597991879</updated>
+    </task>
+    <task id="LOCAL-00036" summary="카톡 에러 메세지 수정">
+      <option name="closed" value="true" />
+      <created>1733598602429</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1733598602429</updated>
+    </task>
+    <task id="LOCAL-00037" summary="카톡 에러 메세지 수정 -완-">
+      <option name="closed" value="true" />
+      <created>1733728901384</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1733728901384</updated>
+    </task>
+    <task id="LOCAL-00038" summary="AuthServer-Keycloak 연결">
+      <option name="closed" value="true" />
+      <created>1750424816271</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1750424816271</updated>
+    </task>
+    <task id="LOCAL-00039" summary="AuthServer-Keycloak 연결 수정 완료">
+      <option name="closed" value="true" />
+      <created>1750608192835</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1750608192835</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="bd37af46-0daa-4c1f-9d50-eaa6eb3b9ae2" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="bd37af46-0daa-4c1f-9d50-eaa6eb3b9ae2">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="First Commit" />
+    <MESSAGE value="어드민 로그인, 추가 / 유저 로그인, 회원가입 구현" />
+    <MESSAGE value="회원 탈퇴, Gateway와 Secretkey 공유 구현" />
+    <MESSAGE value="properties private 설정 테스트" />
+    <MESSAGE value="Kakao 로그인 구현 중 / 이메일, 이름, 전화번호, 아이디 성공 / 배송지 예정" />
+    <MESSAGE value="Kakao, 이메일 계정 통합 완료 / 탈퇴 로직 수정" />
+    <MESSAGE value="Kakao 로그인 실험 성공 / 회원 통합, 가입 구현 중" />
+    <MESSAGE value="AuthServer CI/CD 테스트" />
+    <MESSAGE value="AuthServer CI/CD 테스트: 테스트 프로퍼티" />
+    <MESSAGE value="AuthServer CI/CD 테스트: 테스트 스킵 처리" />
+    <MESSAGE value="리다이렉트 uri 변경" />
+    <MESSAGE value="배송기사 회원가입 로그인 기초 틀" />
+    <MESSAGE value="젠킨스 무중단 배포 실험" />
+    <MESSAGE value="환경변수 설정" />
+    <MESSAGE value="카톡 에러 메세지 수정" />
+    <MESSAGE value="카톡 에러 메세지 수정 -완-" />
+    <MESSAGE value="AuthServer-Keycloak 연결" />
+    <MESSAGE value="AuthServer-Keycloak 연결 수정 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="AuthServer-Keycloak 연결 수정 완료" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/f5/authserver/Service/Kakao/KakaoAuthServiceImpl.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/f5/authserver/Controller/KakaoAuthController.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/f5/authserver/DAO/User/UserDAOImpl.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -8,17 +8,22 @@ import com.f5.authserver.Service.Communication.AccountCommunicationService;
 import com.f5.authserver.Service.User.CustomUserDetailsService;
 import com.f5.authserver.Service.User.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.*;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
 import java.util.Map;
-
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/auth")
@@ -30,34 +35,99 @@ public class LoginController {
     private final UserService userService;
     private final AccountCommunicationService accountCommunicationService;
 
+// dd
+//    @PostMapping("/login")
+//    public ResponseEntity<?> login(@RequestBody UserDTO user) throws AuthenticationException {
+//        try {
+//            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword()));
+//
+//            final UserDetails userDetails = customUserDetailsService.loadUserByUsername(user.getEmail());
+//            final String token = jwtTokenUtil.generateToken(userDetails.getUsername(), "user");
+//
+//            // UserEntity를 서비스 메서드를 통해 가져옴
+//            UserEntity loggedInUser = userService.getLoggedInUserEntity(user.getEmail());
+//
+//            if (!loggedInUser.getKakao()) {
+//                Map<String, Object> response = new HashMap<>();
+//                response.put("token", token);
+//                response.put("user", loggedInUser);
+//                return ResponseEntity.ok(response);
+//            } else {
+//                return ResponseEntity.ok().body(StatusCodeDTO.builder()
+//                        .Code(400L)
+//                        .Msg("카카오 계정으로 로그인 해주세요.")
+//                        .build());
+//            }
+//        } catch (AuthenticationException e) {
+//            return ResponseEntity.status(402).body(StatusCodeDTO.builder()
+//                            .Code(402L)
+//                            .Msg("계정이 없음")
+//                            .build());
+//        }
+//    }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody UserDTO user) throws AuthenticationException {
+    public ResponseEntity<?> login(@RequestBody UserDTO user) {
+        log.info("[LOGIN] 로그인 요청 - 이메일: {}", user.getEmail());
+
         try {
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword()));
+            String tokenUrl = "http://13.124.171.192:8090/realms/test/protocol/openid-connect/token";
 
-            final UserDetails userDetails = customUserDetailsService.loadUserByUsername(user.getEmail());
-            final String token = jwtTokenUtil.generateToken(userDetails.getUsername());
+            MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
+            params.add("grant_type", "password");
+            params.add("client_id", "testClient");
+            params.add("client_secret", "cKqNJl0AdmttMi5Fq4SOTCm6AmSz8dlX"); // confidential client일 경우
+            params.add("username", user.getEmail());
+            params.add("password", user.getPassword());
 
-            // UserEntity를 서비스 메서드를 통해 가져옴
-            UserEntity loggedInUser = userService.getLoggedInUserEntity(user.getEmail());
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
-            if (!loggedInUser.getKakao()) {
-                Map<String, Object> response = new HashMap<>();
-                response.put("token", token);
-                response.put("user", loggedInUser);
-                return ResponseEntity.ok(response);
+            HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(params, headers);
+            RestTemplate restTemplate = new RestTemplate();
+
+            ResponseEntity<Map> response = restTemplate.postForEntity(tokenUrl, request, Map.class);
+
+            if (response.getStatusCode() == HttpStatus.OK && response.getBody() != null) {
+                String accessToken = (String) response.getBody().get("access_token");
+
+                UserEntity loggedInUser = userService.getLoggedInUserEntity(user.getEmail());
+
+                if (!loggedInUser.getKakao()) {
+                    Map<String, Object> responseMap = new HashMap<>();
+                    responseMap.put("token", accessToken);
+                    responseMap.put("user", loggedInUser);
+
+                    log.info("[LOGIN SUCCESS] 사용자 로그인 성공 - 이메일: {}", user.getEmail());
+                    return ResponseEntity.ok(responseMap);
+                } else {
+                    log.warn("[LOGIN BLOCKED] 카카오 계정 로그인 시도 차단 - 이메일: {}", user.getEmail());
+                    return ResponseEntity.badRequest().body(StatusCodeDTO.builder()
+                            .Code(400L)
+                            .Msg("카카오 계정으로 로그인 해주세요.")
+                            .build());
+                }
             } else {
-                return ResponseEntity.ok().body(StatusCodeDTO.builder()
-                        .Code(400L)
-                        .Msg("카카오 계정으로 로그인 해주세요.")
+                log.warn("[LOGIN FAILED] Keycloak 응답 비정상 - 이메일: {}, 응답 코드: {}", user.getEmail(), response.getStatusCode());
+                return ResponseEntity.status(401).body(StatusCodeDTO.builder()
+                        .Code(401L)
+                        .Msg("로그인 실패: Keycloak 응답 오류")
                         .build());
             }
-        } catch (AuthenticationException e) {
-            return ResponseEntity.status(402).body(StatusCodeDTO.builder()
-                            .Code(402L)
-                            .Msg("계정이 없음")
-                            .build());
+
+        } catch (HttpClientErrorException e) {
+            log.warn("[LOGIN FAILED] Keycloak 인증 실패 - 이메일: {}, 오류: {}", user.getEmail(), e.getMessage());
+            return ResponseEntity.status(401).body(StatusCodeDTO.builder()
+                    .Code(401L)
+                    .Msg("Keycloak 인증 실패: " + e.getMessage())
+                    .build());
+
+        } catch (Exception e) {
+            log.error("[LOGIN ERROR] 서버 내부 오류 - 이메일: {}, 예외: {}", user.getEmail(), e.getMessage(), e);
+            return ResponseEntity.status(500).body(StatusCodeDTO.builder()
+                    .Code(500L)
+                    .Msg("서버 오류: " + e.getMessage())
+                    .build());
         }
     }
 

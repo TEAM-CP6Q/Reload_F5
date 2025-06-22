@@ -10,7 +10,6 @@ import com.f5.authserver.Repository.UserRepository;
 import com.f5.authserver.Service.Communication.AccountCommunicationService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
